@@ -11,12 +11,19 @@ function worldMap(data) {
     /**
      * Task 14 - Create a leaflet map and put center to 10,15 with zoom scale of 1
      */
+     var mymap = L.map('mapid').setView([10, 15], 1);
 
     /**
      * Task 15 - Get the tileLayer from the link at the bottom of this file
      * and add it to the map created above.
     */
 
+L.tileLayer('https://api.mapbox.com/styles/v1/josecoto/civ8gwgk3000a2ipdgnsscnai/tiles/256/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'josecoto/civ8gwgk3000a2ipdgnsscnai',
+        maxZoom: 18,
+        accessToken:'pk.eyJ1Ijoiam9zZWNvdG8iLCJhIjoiY2l2OGZxZWNuMDAxODJ6cGdhcGFuN2IyaCJ9.7szLs0lc_2EjX6g21HI_Kg'
+    }).addTo(mymap);
     /**
      * Task 16 - Create an svg call on top of the leaflet map.
      * Also append a g tag on this svg tag and add class leaflet-zoom-hide.
@@ -166,7 +173,7 @@ function worldMap(data) {
 
     //Link to get the leaflet map
     function map_link() {
-        return "https://api.mapbox.com/styles/v1/josecoto/civ8gwgk3000a2ipdgnsscnai/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9zZWNvdG8iLCJhIjoiY2l2OGZxZWNuMDAxODJ6cGdhcGFuN2IyaCJ9.7szLs0lc_2EjX6g21HI_Kg";
+        return 'https://api.mapbox.com/styles/v1/josecoto/civ8gwgk3000a2ipdgnsscnai/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9zZWNvdG8iLCJhIjoiY2l2OGZxZWNuMDAxODJ6cGdhcGFuN2IyaCJ9.7szLs0lc_2EjX6g21HI_Kg';
     }
 
 }
