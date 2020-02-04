@@ -70,9 +70,14 @@ function parseData(data){
  */
 
 function initCentroids(data, k){
-
+    var centroid = data[math.floor(math.random()*data.lenght)];
     //Create k centroids
+    for (var i = 0; i < k; i++) {
 
+    }
+
+
+    console.log(centroid)
     return centroid;
 }
 
